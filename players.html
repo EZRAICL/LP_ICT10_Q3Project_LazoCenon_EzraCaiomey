@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <span>Intramurals SY 2025-2026</span>
+        <div class="nav-links">
+            <a href="index.html" class="btn-signup">Sign Up</a>
+            <a href="checker.html" class="btn-checker">Team Checker</a>
+            <a href="players.html" class="btn-players">Players</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h3>Intramurals Players:</h3>
+            <button class="pink-btn" onclick="showPlayers()">Show Players</button>
+            <ol class="player-list" id="playerList"></ol>
+        </div>
+    </div>
+
+    <script>
+        // Player names array (like Python list)
+        const players = [
+            "Abaca","Alavado","Arenal","Aventajado","Buhain",
+            "Carpio","Cenon","Cruz","De Leon","De Peralta",
+            "Del Barrio","Dida-agun","Dumlao","Estapia","Galope",
+            "Galura","Guevarra","Gurango","Lazo","Liwag",
+            "Magpantay","Moyaen","Panuncialman","Prowel",
+            "Ramos","Sannino","Tecson","Ulit"
+        ];
+
+        // Loop through array and display players
+        function showPlayers() {
+            const list = document.getElementById("playerList");
+            list.innerHTML = ""; // Clear before showing
+            for (let i = 0; i < players.length; i++) {
+                const li = document.createElement("li");
+                li.textContent = players[i];
+                list.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
