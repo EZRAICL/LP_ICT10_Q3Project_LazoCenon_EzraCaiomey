@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Intramurals 2025-2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <span>Intramurals SY 2025-2026</span>
+        <div class="nav-links">
+            <a href="index.html" class="btn-signup">Sign Up</a>
+            <a href="checker.html" class="btn-checker">Team Checker</a>
+            <a href="players.html" class="btn-players">Players</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Create Account</h2>
+            <form id="signupForm" onsubmit="return handleSignUp(event)">
+                <input type="text" id="user" placeholder="Username" required>
+                <input type="password" id="pass" placeholder="Password" required>
+                <button type="submit" class="pink-btn">Sign up</button>
+            </form>
+            <div id="message" class="status-msg">
+                Account created. You may now log in using your credentials.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleSignUp(event) {
+            event.preventDefault();
+            const user = document.getElementById('user').value;
+            alert("Welcome, " + user + "! Your account has been created.");
+            return false;
+        }
+    </script>
+</body>
+</html>
