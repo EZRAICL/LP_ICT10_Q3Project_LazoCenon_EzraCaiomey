@@ -24,7 +24,6 @@
     </div>
 
     <script>
-        // Player names array (like Python list)
         const players = [
             "Abaca","Alavado","Arenal","Aventajado","Buhain",
             "Carpio","Cenon","Cruz","De Leon","De Peralta",
@@ -34,10 +33,10 @@
             "Ramos","Sannino","Tecson","Ulit"
         ];
 
-        // Loop through array and display players
+        
         function showPlayers() {
             const list = document.getElementById("playerList");
-            list.innerHTML = ""; // Clear before showing
+            list.innerHTML = ""; 
             for (let i = 0; i < players.length; i++) {
                 const li = document.createElement("li");
                 li.textContent = players[i];

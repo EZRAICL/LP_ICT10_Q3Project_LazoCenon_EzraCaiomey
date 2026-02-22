@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <span>Intramurals SY 2025-2026</span>
+        <div class="nav-links">
+            <a href="index.html" class="btn-signup">Sign Up</a>
+            <a href="checker.html" class="btn-checker">Team Checker</a>
+            <a href="players.html" class="btn-players">Players</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>INTRAMS TEAM CHECKER</h2>
+            <p>Are you done with the online registration?<br>
+                <input type="radio" name="reg" id="regY"> Yes
+                <input type="radio" name="reg"> No
+            </p>
+            <p>Do you have medical clearance from the clinic?<br>
+                <input type="radio" name="med" id="medY"> Yes
+                <input type="radio" name="med"> No
+            </p>
+            <label>What's your Grade & Section?</label>
+            <select id="grade">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button class="pink-btn" onclick="checkEligibility()">Check Eligibility</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkEligibility() {
+            const reg = document.getElementById('regY').checked;
+            const med = document.getElementById('medY').checked;
+            const res = document.getElementById('result');
+            if(reg && med) {
+                res.innerHTML = "<p style='color:green; margin-top:10px;'>Congratulations! You are eligible! 🎉</p>";
+            } else {
+                res.innerHTML = "<p style='color:red; margin-top:10px;'>Please complete requirements first.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

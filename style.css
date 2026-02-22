@@ -1,0 +1,105 @@
+/* Pink and white theme with rainbow hover */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-signup { background-color: #ff80ab; }
+.btn-checker { background-color: #ffb6c1; }
+.btn-players { background-color: #ff99cc; }
+
+.nav-links a:hover {
+    background: linear-gradient(90deg, #ff5f6d, #ffc371, #33ccff, #5ee7df, #b4ec51);
+    transform: scale(1.05);
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #ff4d6d;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ffe6f0;
+    border-radius: 5px;
+    background-color: #fff0f5;
+    box-sizing: border-box;
+}
+
+.pink-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff80ab, #ff4d6d);
+    transition: all 0.3s ease;
+}
+
+.pink-btn:hover {
+    background: linear-gradient(90deg, #ff5f6d, #ffc371, #33ccff, #5ee7df, #b4ec51);
+    transform: scale(1.05);
+}
+
+.status-msg {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.player-list {
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
