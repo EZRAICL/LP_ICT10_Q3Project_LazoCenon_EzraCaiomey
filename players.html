@@ -33,13 +33,17 @@
             "Ramos","Sannino","Tecson","Ulit"
         ];
 
-        
+        // Teams
+        const teams = ["Red Team 🔴", "Blue Team 🔵", "Yellow Team 🟡", "Green Team 🟢"];
+
         function showPlayers() {
             const list = document.getElementById("playerList");
-            list.innerHTML = ""; 
+            list.innerHTML = "";
+
             for (let i = 0; i < players.length; i++) {
+                const team = teams[i % teams.length]; // rotate teams
                 const li = document.createElement("li");
-                li.textContent = players[i];
+                li.textContent = `${players[i]} — ${team}`;
                 list.appendChild(li);
             }
         }
